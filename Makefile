@@ -75,7 +75,7 @@ image:
 	$(CONTAINER_ENGINE) build --build-arg VERSION="$(VERSION)" --build-arg ARCH="amd64" -t $(IMAGE) .
 
 image.amd64:
-	$(CONTAINER_ENGINE) build --build-arg VERSION="$(VERSION)" --build-arg ARCH="amd64" -t $(IMAGE)-amd64 .
+	$(CONTAINER_ENGINE) build --build-arg VERSION="$(VERSION)" --build-arg ARCH="amd64" -t $(REGISTRY)/$(IMAGE)-amd64 .
 
 image.arm:
 	$(CONTAINER_ENGINE) build --build-arg VERSION="$(VERSION)" --build-arg ARCH="arm" -t $(IMAGE)-arm .

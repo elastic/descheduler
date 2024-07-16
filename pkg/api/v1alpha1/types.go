@@ -52,6 +52,9 @@ type DeschedulerPolicy struct {
 
 	// MaxNoOfPodsToEvictPerNamespace restricts maximum of pods to be evicted per namespace.
 	MaxNoOfPodsToEvictPerNamespace *uint `json:"maxNoOfPodsToEvictPerNamespace,omitempty"`
+
+	// MinPodAge prevents pods younger than specified minutes from being evicted.
+	MinPodAge *uint `json:"minPodAge,omitempty"`
 }
 
 type (
